@@ -10,7 +10,7 @@ import {
   Users,
   Star,
 } from "lucide-react";
-
+import Image from "next/image";
 const services = [
   {
     icon: <Building className="w-10 h-10 text-neonBlue" />,
@@ -125,7 +125,7 @@ export default function ServicesPage() {
               whileHover={{ scale: 1.05 }}
               className="rounded-xl overflow-hidden shadow-[0_0_25px_rgba(255,0,255,0.2)] bg-white/5 border border-white/10"
             >
-              <img
+              <Image
                 src={p.img}
                 alt={p.name}
                 className="w-full h-48 object-cover opacity-90 hover:opacity-100 transition"
@@ -172,7 +172,7 @@ export default function ServicesPage() {
               className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,0,0.15)]"
             >
               <Star className="mx-auto mb-3 text-neonYellow" />
-              <p className="text-gray-300 italic mb-4">"{t.text}"</p>
+              <p className="text-gray-300 italic mb-4">&quot;{t.text}&quot;</p>
               <h4 className="text-white font-semibold">- {t.name}</h4>
             </motion.div>
           ))}

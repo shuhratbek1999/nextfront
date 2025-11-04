@@ -33,7 +33,20 @@ export default function HomePage() {
     <main className="relative overflow-hidden text-white">
       {/* Light Trail Cursor */}
       <motion.div
+        className="fixed w-6 h-6 rounded-full bg-neonBlue shadow-[0_0_20px_#00f0ff] pointer-events-none z-50"
+        style={{
+          left: cursor.x,
+          top: cursor.y,
+          translateX: "-50%",
+          translateY: "-50%",
+        }}
+      />
+      <motion.div
         className="fixed top-0 left-0 w-40 h-40 rounded-full bg-neonBlue/25 blur-3xl pointer-events-none z-50"
+        animate={{
+          x: cursor.x - 80,
+          y: cursor.y - 80,
+        }}
         style={{
           translateX: smoothX,
           translateY: smoothY,
